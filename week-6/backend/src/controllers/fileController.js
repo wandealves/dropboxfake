@@ -12,7 +12,8 @@ class FileController {
         box.files.push(file);
         await box.save();
 
-        req.io.sockets.in(box_id).emit('file', file);
+        //comentado para tsetar
+       // req.io.sockets.in(box_id).emit('file', file);
 
         return res.send(file);
     }
